@@ -1,0 +1,220 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.lista-disponible {
+  width: 60%;
+}
+
+.lista-disponible header {
+  padding-left: 25px;
+}
+
+.lista-disponible header h2 {
+  font-size: 50px;
+  margin: 0px;
+}
+
+.lista-disponible header p {
+  font-size: 25px;
+  margin: 0px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0 40px 0;
+}
+
+.filtros label,
+.filtros input,
+.filtros select {
+  font-size: 20px;
+}
+
+.lista-disponible-container {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.lista-disponible_libros {
+  width: 200px;
+  height: 300px;
+  padding: 0px;
+  background: transparent;
+  border-radius: 0;
+  border: 0px solid transparent;
+}
+
+.lista-disponible_libros:hover {
+  padding: 0px;
+  opacity: 0.4;
+}
+
+.lista-disponible_libros-img,
+.lista-lectura_libros-img {
+  width: 200px;
+  height: 300px;
+}
+
+.seleccionado {
+  opacity: 0.4;
+  cursor: no-drop;
+}
+
+.lista-lectura {
+  background: #008cff34;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.lista-lectura h2 {
+  margin: 20px 0 50px 0;
+  font-size: 40px;
+  text-align: center;
+}
+
+.lista-lectura-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.lista-lectura_libros {
+  position: relative;
+}
+
+.boton-borrar {
+  position: absolute;
+  top: -12px;
+  right: -15px;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  border: 0px solid transparent;
+}
+
+.boton-borrar:hover {
+  padding: 0px;
+  outline: none;
+}
+
+.boton-borrar svg:hover {
+  fill: #d60000;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .lista-disponible {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .lista-lectura {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .lista-disponible header h2 {
+    font-size: 40px;
+  }
+  .lista-disponible header p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lista-disponible header {
+    padding-left: 0px;
+  }
+  .lista-disponible header h2 {
+    text-align: center;
+  }
+  .lista-disponible header p {
+    text-align: center;
+  }
+  .filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .lista-disponible header h2 {
+    font-size: 30px;
+  }
+  .lista-disponible header p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .filtros label,
+  .filtros input,
+  .filtros select {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .lista-lectura h2 {
+    font-size: 30px;
+  }
+}
